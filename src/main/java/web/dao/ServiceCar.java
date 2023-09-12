@@ -20,6 +20,8 @@ public class ServiceCar {
     public List<Car> getCountCars(int count) {
         if (count >=5) {
             count = 5;
+        } else if (count<0) {
+            count = 0;
         }
         return cars.subList(0,count);
     }
